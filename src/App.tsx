@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import VehicleScene from './components/VehicleViewer/VehicleScene';
 import ComponentInspector from './components/UI/ComponentInspector';
 import VehicleControls from './components/UI/VehicleControls';

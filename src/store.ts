@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import type { VehicleSystem } from './vehicleTypes';
+import type { VehicleSystem } from './vehicle/vehicleTypes';
 
 interface VehicleStore {
   selectedComponent: string | null;

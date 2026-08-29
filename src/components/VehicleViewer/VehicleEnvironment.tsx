@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import * as THREE from 'three';
 import { useVehicleStore } from '../../store';
 
@@ -64,9 +64,7 @@ export default function VehicleEnvironment() {
 
       {/* Hemisphere */}
       <hemisphereLight
-        skyColor={0x445566}
-        groundColor={0x111122}
-        intensity={lightsEnabled ? 0.6 : 0.2}
+        args={[0x445566, 0x111122, lightsEnabled ? 0.6 : 0.2]}
       />
 
       {/* Floor spot for reflection feel */}

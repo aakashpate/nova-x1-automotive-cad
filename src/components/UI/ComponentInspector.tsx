@@ -1,4 +1,3 @@
-import React from 'react';
 import { useVehicleStore } from '../../store';
 import { VEHICLE_COMPONENTS, type VehicleSystem } from '../../vehicle/vehicleTypes';
 

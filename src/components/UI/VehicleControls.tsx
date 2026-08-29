@@ -1,4 +1,3 @@
-import React from 'react';
 import { useVehicleStore } from '../../store';
 import { CAMERA_PRESETS } from '../../utils/cameraPresets';
 

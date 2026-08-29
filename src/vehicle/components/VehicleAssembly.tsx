@@ -316,13 +316,11 @@ interface WheelAssemblyProps {
   isRear: boolean;
   animProgress: number;
   xray: boolean;
-  selected: string | null;
   onSelect: (id: string) => void;
   exploded: boolean;
   wheelRotation: number;
   isFiltered: boolean;
   inspectMode: boolean;
-  selectedId: string | null;
   wheelId: string;
   tireId: string;
   discId: string;
@@ -335,7 +333,7 @@ interface WheelAssemblyProps {
 function WheelAssembly({
   position, name, tireName, brakeDiscName, caliperName, shockName, side,
   animProgress, xray, onSelect, exploded, wheelRotation, isFiltered,
-  inspectMode, _selectedId, wheelId, tireId, discId, caliperId, shockId,
+  inspectMode, wheelId, tireId, discId, caliperId, shockId,
   defaultPos, explodedOff,
 }: WheelAssemblyProps) {
   const wheelRef = useRef<THREE.Group>(null);
@@ -859,10 +857,10 @@ export default function VehicleAssembly() {
         position={[-0.82, 0.34, -1.4]} name="vehicle_wheel_fl" tireName="vehicle_tire_fl"
         brakeDiscName="vehicle_brake_disc_fl" caliperName="vehicle_caliper_fl"
         shockName="vehicle_shock_fl" side="left" isRear={false}
-        animProgress={p} xray={xrayMode} selected={selectedComponent}
+        animProgress={p} xray={xrayMode}
         onSelect={handleSelect} exploded={exploded} wheelRotation={wheelRotation}
         isFiltered={isSystemVisible('wheels') || isSystemVisible('brakes') || isSystemVisible('suspension')}
-        inspectMode={inspectMode} selectedId={selectedComponent}
+        inspectMode={inspectMode}
         wheelId="wheelFL" tireId="tireFL" discId="brakeDiscFL" caliperId="caliperFL" shockId="shockFL"
         defaultPos={[-0.82, 0.34, -1.4]} explodedOff={[-1.5, 0, -0.5]}
       />
@@ -871,10 +869,10 @@ export default function VehicleAssembly() {
         position={[0.82, 0.34, -1.4]} name="vehicle_wheel_fr" tireName="vehicle_tire_fr"
         brakeDiscName="vehicle_brake_disc_fr" caliperName="vehicle_caliper_fr"
         shockName="vehicle_shock_fr" side="right" isRear={false}
-        animProgress={p} xray={xrayMode} selected={selectedComponent}
+        animProgress={p} xray={xrayMode}
         onSelect={handleSelect} exploded={exploded} wheelRotation={wheelRotation}
         isFiltered={isSystemVisible('wheels') || isSystemVisible('brakes') || isSystemVisible('suspension')}
-        inspectMode={inspectMode} selectedId={selectedComponent}
+        inspectMode={inspectMode}
         wheelId="wheelFR" tireId="tireFR" discId="brakeDiscFR" caliperId="caliperFR" shockId="shockFR"
         defaultPos={[0.82, 0.34, -1.4]} explodedOff={[1.5, 0, -0.5]}
       />
@@ -883,10 +881,10 @@ export default function VehicleAssembly() {
         position={[-0.81, 0.34, 1.4]} name="vehicle_wheel_rl" tireName="vehicle_tire_rl"
         brakeDiscName="vehicle_brake_disc_rl" caliperName="vehicle_caliper_rl"
         shockName="vehicle_shock_rl" side="left" isRear={true}
-        animProgress={p} xray={xrayMode} selected={selectedComponent}
+        animProgress={p} xray={xrayMode}
         onSelect={handleSelect} exploded={exploded} wheelRotation={wheelRotation}
         isFiltered={isSystemVisible('wheels') || isSystemVisible('brakes') || isSystemVisible('suspension')}
-        inspectMode={inspectMode} selectedId={selectedComponent}
+        inspectMode={inspectMode}
         wheelId="wheelRL" tireId="tireRL" discId="brakeDiscRL" caliperId="caliperRL" shockId="shockRL"
         defaultPos={[-0.81, 0.34, 1.4]} explodedOff={[-1.5, 0, 0.5]}
       />
@@ -895,10 +893,10 @@ export default function VehicleAssembly() {
         position={[0.81, 0.34, 1.4]} name="vehicle_wheel_rr" tireName="vehicle_tire_rr"
         brakeDiscName="vehicle_brake_disc_rr" caliperName="vehicle_caliper_rr"
         shockName="vehicle_shock_rr" side="right" isRear={true}
-        animProgress={p} xray={xrayMode} selected={selectedComponent}
+        animProgress={p} xray={xrayMode}
         onSelect={handleSelect} exploded={exploded} wheelRotation={wheelRotation}
         isFiltered={isSystemVisible('wheels') || isSystemVisible('brakes') || isSystemVisible('suspension')}
-        inspectMode={inspectMode} selectedId={selectedComponent}
+        inspectMode={inspectMode}
         wheelId="wheelRR" tireId="tireRR" discId="brakeDiscRR" caliperId="caliperRR" shockId="shockRR"
         defaultPos={[0.81, 0.34, 1.4]} explodedOff={[1.5, 0, 0.5]}
       />
